@@ -88,7 +88,7 @@ void playMusic(string cadenaMorse){
 void principal(){
     string cadena = "";
     cin.sync();
-    cout<< "Escribe la linea para traducir"<< endl;
+    cout<< "matn khod ra baraye tarjome benvisid :"<< endl;
     getline(cin, cadena, '\n');
 
     int tamCadena = cadena.length();
@@ -103,24 +103,24 @@ void principal(){
 
     //Elige la opcion que quiera
     int opc = 0;
-    cout<<"Selecciona la opcion con la que deseas mostrar el resultado"<<endl;
-    cout<<"1.- Reproduccion de sonido"<<endl;
-    cout<<"2.- Reproduccion en pantalla"<<endl;
+    cout<<"gozinei ke mikhahid be an sabk pakhsh shavad ra namayesh dahid :"<<endl;
+    cout<<"1.- pakhsh seda"<<endl;
+    cout<<"2.- pakhsh bar roye safhe namayesh"<<endl;
     cin>>opc;
     if(cin.fail())
         {
-            cout<<"Opcion incorrecta"<<endl;
+            cout<<"gozine eshtebah"<<endl;
             cin.clear();
             cin.ignore(10, '\n');
             opc = 0;
         }
     switch(opc){
     case 1:
-        cout << "Cadena resultante"<< endl;
+        cout << "natije matn shoma"<< endl;
         playMusic(cadenaMorse);
         break;
     case 2:
-        cout << "Cadena resultante"<< endl;
+        cout << "natije matn shoma"<< endl;
         playImage(cadenaMorse);
         break;
     default:
@@ -244,7 +244,7 @@ string morse(char letra)
             break;
 
         default:
-            cout<<"Elemento no reconocido"<< endl;
+            cout<<"mored nashenas"<< endl;
     }
     return "";
 }
@@ -255,7 +255,7 @@ int main()
     principal();
 
     do{
-    cout<<endl<<"Deseas salir del programa? Si -> 1 No->2"<<endl;
+    cout<<endl<<"aya mikhahid az barname kharej shavid? bale -> 1 kheyr -> 2"<<endl;
     cin >> opc;
     if(cin.fail())
         {
@@ -270,7 +270,7 @@ int main()
         principal();
         break;
     default:
-        cout<<"Debe seleccionar una opcion correcta"<<endl;
+        cout<<"shoma bayad yek gozine dorost ra entekhab konid."<<endl;
         break;
         }
     }
